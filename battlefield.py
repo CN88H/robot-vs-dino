@@ -7,17 +7,37 @@ class Battlefield:
     def __init__(self):
         self.fleet = Fleet()
         self.herd = Herd()
-        pass
+        
 # display welcome
     def display_welcome(self):
-        self.intro = print("Welcome to ")
+        print("Welcome to the battle between robots and dinosaurs!")
+        print("________________________________________________________")
 
     def run_game(self):
-        
-        print("Welcome to the battle between a ")
+        pass
+
         # get battle phase
+    def battle(self):
+        pass
+
 
         #set turns for each
+    def dino_turn(self, dinosaur):
+        pass
+
+    def robo_turn(self, robot):
+        pass
+
+    def show_dino_opponent_option(self):
+        pass
+
+    def show_robo_opponent_option(self):
+        pass
+
+    def diplay_winners(self):
+        pass
+
+
 
         #give options for each turn
 
