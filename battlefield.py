@@ -1,6 +1,8 @@
 from fleet import Fleet
 from herd import Herd
-
+from dinosaur import Dinosaur
+from weapon import Weapon
+from robot import Robot
 
 
 class Battlefield:
@@ -10,6 +12,7 @@ class Battlefield:
         
 # display welcome
     def display_welcome(self):
+        print("________________________________________________________")
         print("Welcome to the battle between robots and dinosaurs!")
         print("________________________________________________________")
 

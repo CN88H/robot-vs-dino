@@ -1,5 +1,7 @@
-import battlefield
+from battlefield import Battlefield
 
-game = battlefield.Battlefield()
+battlefield = Battlefield()
 
-game.run_game()
+battlefield.display_welcome()
+
+battlefield.run_game()

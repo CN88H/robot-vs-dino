@@ -1,14 +1,14 @@
 from robot import Robot
 
 class Dinosaur:
-    def __init__(self, name, attack_power):
+    def __init__(self, name, dino_attack_power):
         self.name = name
         self.health = 100
-        self.attack_power = attack_power
+        self.dino_attack_power = dino_attack_power
 
 
-    def attack(self, robot):
-        pass
+    def attack_robot(self, robot):
+        robot.health -= self.dino_attack_power
     
 
 
