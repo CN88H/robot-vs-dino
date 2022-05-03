@@ -6,9 +6,9 @@ class Herd:
         self.create_herd()
 
     def create_herd(self):
-        first_dino = Dinosaur("T Rex", 12)
-        second_dino = Dinosaur("Triceratops", 10)
-        third_dino = Dinosaur("Spinosaurus", 15)
+        first_dino = Dinosaur("T Rex", 30)
+        second_dino = Dinosaur("Triceratops", 40)
+        third_dino = Dinosaur("Spinosaurus", 50)
         self.dinosaurs.append(first_dino)
         self.dinosaurs.append(second_dino)
         self.dinosaurs.append(third_dino)
