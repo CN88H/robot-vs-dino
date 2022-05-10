@@ -1,4 +1,4 @@
-from robot import Robot
+# from robot import Robot
 
 class Dinosaur:
     def __init__(self, name, dino_attack_power):
@@ -9,6 +9,7 @@ class Dinosaur:
 
     def attack_robot(self, robot):
         robot.health -= self.dino_attack_power
+        print(f"{self.name} attack {robot.name}. {robot.name} is now at {robot.health}!")
     
 
 
@@ -17,6 +18,9 @@ class Dinosaur:
         # self.slash -= 10
         # self.bite -= 15
         # self.stomp -= 20
+
+    def __str__(self) -> str:
+        return self.name
 
 
 

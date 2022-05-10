@@ -11,7 +11,8 @@ class Robot:
         dinosaur.health -= self.weapon.attack_power
         print(f"{self.name} attack the {dinosaur.name} with a {self.weapon.weapon_name}.  {dinosaur.name} health is now {dinosaur.health}")
 
-
+    def __str__(self) -> str:
+        return self.name
 
 
 

@@ -3,7 +3,8 @@ class Weapon:
         self.weapon_name = name
         self.attack_power = attack_power
 
-
+    def __str__(self) -> str:
+        return self.weapon_name
 
 
 

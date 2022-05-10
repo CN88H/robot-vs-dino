@@ -6,13 +6,16 @@ class Herd:
         self.create_herd()
 
     def create_herd(self):
-        first_dino = Dinosaur("T Rex", 30)
-        second_dino = Dinosaur("Triceratops", 40)
-        third_dino = Dinosaur("Spinosaurus", 50)
-        self.dinosaurs.append(first_dino)
-        self.dinosaurs.append(second_dino)
-        self.dinosaurs.append(third_dino)
+        dino_1 = Dinosaur("T Rex", 30)
+        dino_2 = Dinosaur("Triceratops", 40)
+        dino_3 = Dinosaur("Spinosaurus", 50)
+        self.dinosaurs.append(dino_1)
+        self.dinosaurs.append(dino_2)
+        self.dinosaurs.append(dino_3)
         
+
+    # def __str__(self) -> str:
+    #     return self.name
         # self.herd_list = [self.first_dino, self.second_dino, self.third_dino]
 
         

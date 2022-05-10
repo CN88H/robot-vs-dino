@@ -8,12 +8,15 @@ class Fleet:
         self.create_fleet()
 
     def create_fleet(self):        
-        bender_robot = Robot("Bender")
-        Gerrald = Robot("Gerrald")
-        Gundam = Robot("Gundam")
-        self.robots.append(bender_robot)
-        self.robots.append(Gerrald)
-        self.robots.append(Gundam)
+        robo_1 = Robot("Bender")
+        robo_2 = Robot("Gerrald")
+        robo_3 = Robot("Gundam")
+        self.robots.append(robo_1)
+        self.robots.append(robo_2)
+        self.robots.append(robo_3)
         
+
+    # def __str__(self) -> str:
+    #     return self.name
         #create one more robot
         #use .append to add each robot object into self.robots
