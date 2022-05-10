@@ -1,9 +1,6 @@
 from fleet import Fleet
 from herd import Herd
-# from dinosaur import Dinosaur
-# from weapon import Weapon
-# from robot import Robot
-import random
+# import random
 
 class Battlefield:
     def __init__(self):
@@ -20,19 +17,16 @@ class Battlefield:
     def run_game(self):
         self.display_welcome()
 
-        self.choose_attacker()
-
         self.battle()
 
         self.display_winners()
 
         # get battle phase
 
-    def choose_attacker(self):
-
+    def battle(self):
         print("Pick who to attack.")        
 
-        valid_response = False
+        # valid_response = False
 
         # while valid_response == False:
         while len(self.herd.dinosaurs) > 0 and len(self.fleet.robots) > 0:
@@ -40,57 +34,70 @@ class Battlefield:
             self.selected_turn = input("1 for dinosaurs and 2 for robots: ")
 
             if self.selected_turn == "1":
-                self.selected_turn = self.dino_turn()
+                self.selected_turn = self.herd
                 # valid_response = True
                 print(f"You picked {self.selected_turn}.")
-                if len(self.fleet.robots) > 0:
-                    self.robo_turn
+                self.dino_turn()
+         
             elif self.selected_turn == "2":
-                self.selected_turn = self.robo_turn()
+                self.selected_turn = self.fleet
                 # valid_response = True
                 print(f"You picked {self.selected_turn}.")
-                if len(self.herd.dinosaurs) > 0:
-                    self.dino_turn
+                self.robo_turn()
+             
             else:
                 print("Please pick again.")
 
-    def battle(self):
-        print(f"One of the {self.selected_turn} will attack")
+    #     print(f"One of the {self.selected_turn} will attack")
         
-        if self.selected_turn == self.herd:
+    #     if self.selected_turn == self.herd:
 
-            self.herd.dinosaurs[0].attack_robot(self.fleet.robots[0])
-            print(f"{self.fleet.robots}")
-                if self.
-
-
-
-
+    #         self.herd.dinosaurs[0].attack_robot(self.fleet.robots[0])
+    #         print(f"{self.fleet.robots}")
             
-        elif self.selected_turn == self.fleet:
+    #     elif self.selected_turn == self.fleet:
             
-            self.fleet.robots[0].attack_dino(self.herd.dinosaurs[0])
+    #         self.fleet.robots[0].attack_dino(self.herd.dinosaurs[0])
 
 
         #set turns for each
-    def dino_turn(self, dinosaur):
-        pass
+    def dino_turn(self):
+        self.herd.dinosaurs[0].attack_robot(self.fleet.robots[0])
+        # if robot's health hits zero, remove it from list
+        if self.fleet.robots[0].health <= 0:
+            print(f"{self.fleet.robots[0]} is dead!")
+            self.fleet.robots.remove(self.fleet.robots[0])
 
-    def robo_turn(self, robot):
-        pass
 
+
+        # self.show_dino_opponent_option
+        # if self.selected_turn == self.herd:
+
+            
+
+    def robo_turn(self):
+        self.fleet.robots[0].attack_dino(self.herd.dinosaurs[0])
+        if self.herd.dinosaurs[0].health <= 0:
+                self.herd.dinosaurs.remove(self.herd.dinosaurs[0])
+
+
+        # self.show_robo_opponent_option
+        # if self.selected_turn == self.fleet:
+            
+   
     def show_dino_opponent_option(self):
-        # print(f"{Dinosaur.")
+    # loop through list of dinosaurs and show their names, maybe health
         pass
+
 
     def show_robo_opponent_option(self):
         pass
 
+
     def display_winners(self):
-        if len(self.herd.dinosaurs) > len(self.fleet.robots):
-            print("Dinosaurs Win!")
-        else:
-            print("Robots Win!")
+    # check len of lists, if one is greater than zero, they won
+        pass
+
 
 
 
