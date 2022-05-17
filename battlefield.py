@@ -85,18 +85,22 @@ class Battlefield:
         # if self.selected_turn == self.fleet:
             
    
-    def show_dino_opponent_option(self):
-    # loop through list of dinosaurs and show their names, maybe health
-        pass
+    # def show_dino_opponent_option(self):
+    # # loop through list of dinosaurs and show their names, maybe health
+    #     pass
 
 
-    def show_robo_opponent_option(self):
-        pass
+    # def show_robo_opponent_option(self):
+    #     pass
 
 
     def display_winners(self):
     # check len of lists, if one is greater than zero, they won
-        pass
+        if len(self.herd.dinosaurs) > len(self.fleet.robots):
+            print("Dinosaurs Win!")
+        else:
+            print("Robots Win!")
+
 
 
 
